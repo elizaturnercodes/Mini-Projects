@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,600;1,400&display=swap");
+
+:root {
+  --main-blue: #60a5fa;
+  --shade-blue: #b0d2fd;
+
+  --grey: #f6f7fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--grey);
+  font-family: "Mulish", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+
+  max-width: 100%;
+  width: 350px;
+}
+
+/* LINE BETWEEN STEP NUMBERS */
+.progress-container::before {
+  content: "";
+  background-color: var(--shade-blue);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--main-blue);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+
+.circle {
+  background-color: var(--shade-blue);
+  color: #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+}
+
+.active {
+  background-color: var(--main-blue);
+  color: #fff;
+}
+
+.btn {
+  background-color: var(--main-blue);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--shade-blue);
+  cursor: not-allowed;
+}

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap");
+
+:root {
+  --dark-blue: #93c5fd;
+  --light-blue: #dbeafe;
+  --text-color: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  color: var(--text-color);
+  background-image: linear-gradient(#fff, var(--light-blue), var(--dark-blue));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  color: var(--dark-blue);
+  font-size: 100px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.4;
+}
+
+form {
+  box-shadow: 0 4px 10px var(--dark-blue);
+  max-width: 100%;
+  width: 400px;
+}
+
+.input {
+  border: none;
+  color: var(--dark-blue);
+  font-size: 20px;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--light-blue);
+}
+
+.input:focus {
+  outline-color: var(--light-blue);
+}
+
+.todos {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.todos li {
+  font-size: 15px;
+  border: 0.5px solid var(--light-blue);
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.todos li.completed {
+  color: var(--light-blue);
+  text-decoration: line-through;
+}
+
+.directions {
+  color: var(--text-color);
+  margin-top: 30px;
+  text-align: center;
+}

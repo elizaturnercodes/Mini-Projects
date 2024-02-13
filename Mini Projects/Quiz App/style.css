@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap");
+
+:root {
+  --dark-blue: #93c5fd;
+  --light-blue: #dbeafe;
+  --text-color: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  color: var(--text-color);
+  background-image: linear-gradient(#fff, var(--light-blue), var(--dark-blue));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.quiz-container {
+  background-color: #ffffff7c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #00000037;
+  width: 400px;
+  overflow: hidden;
+}
+
+.quiz-header {
+  padding: 40px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+button {
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text-color);
+  background-color: var(--dark-blue);
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 13px;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  background-color: var(--light-blue);
+}
+
+button:focus {
+  outline: none;
+}
